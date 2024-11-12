@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+
+    void Start()
+    {
+        string[] words = { "Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird" };
+        System.Random random = new System.Random();
+        string sentence = "";
+        int wordCount = 0;
+
+        while (wordCount < 7)
+        {
+            int randomIndex = random.Next(words.Length);
+            sentence += words[randomIndex] + " ";
+            wordCount++;
+        }
+
+        Debug.Log("Funny Sentence: " + sentence.Trim()); 
+    }
+}
+
+
+
